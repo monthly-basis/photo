@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Service\Photo;
+namespace LeoGalleguillos\PhotoTest\Model\Service;
 
-use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Service as UserService;
-use LeoGalleguillos\User\Model\Table as UserTable;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class IncrementViewsTest extends TestCase
@@ -11,9 +11,9 @@ class IncrementViewsTest extends TestCase
     protected function setUp()
     {
         $this->photoTableMock = $this->createMock(
-            UserTable\Photo::class
+            PhotoTable\Photo::class
         );
-        $this->incrementViewsService = new UserService\Photo\IncrementViews(
+        $this->incrementViewsService = new PhotoService\IncrementViews(
             $this->photoTableMock
         );
     }
@@ -21,14 +21,14 @@ class IncrementViewsTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserService\Photo\IncrementViews::class,
+            PhotoService\IncrementViews::class,
             $this->incrementViewsService
         );
     }
 
     public function testIncrementViews()
     {
-        $photoEntity = new UserEntity\Photo();
+        $photoEntity = new PhotoEntity\Photo();
         $photoEntity->setPhotoId(123);
 
         $this->photoTableMock->method('updateViewsWherePhotoId')->willReturn(true);

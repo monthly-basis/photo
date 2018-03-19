@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\User\Model\Table;
+namespace LeoGalleguillos\Photo\Model\Table;
 
 use ArrayObject;
 use Generator;
@@ -55,7 +55,7 @@ class Photo
         return (int) $row['count'];
     }
 
-    public function selectCountWhereUserId(int $userId)
+    public function selectCountWherePhotoId(int $userId)
     {
         $sql = '
             SELECT COUNT(*) AS `count`

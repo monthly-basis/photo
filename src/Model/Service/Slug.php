@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\User\Model\Service\Photo;
+namespace LeoGalleguillos\Photo\Model\Service;
 
 use LeoGalleguillos\String\Model\Service as StringService;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 
 class Slug
 {
@@ -20,11 +20,11 @@ class Slug
     /**
      * Get slug.
      *
-     * @param UserEntity\Photo $photoEntity
+     * @param PhotoEntity\Photo $photoEntity
      * @return string
      */
     public function getSlug(
-        UserEntity\Photo $photoEntity
+        PhotoEntity\Photo $photoEntity
     ) : string {
         return $this->urlFriendlyService->getUrlFriendly(
             $photoEntity->getTitle()

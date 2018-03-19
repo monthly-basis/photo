@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\User\Model\Entity;
+namespace LeoGalleguillos\Photo\Model\Entity;
 
 use DateTime;
 use LeoGalleguillos\Image\Model\Entity as ImageEntity;
@@ -63,55 +63,55 @@ class Photo
         return $this->views;
     }
 
-    public function setCreated(DateTime $created) : UserEntity\Photo
+    public function setCreated(DateTime $created) : PhotoEntity\Photo
     {
         $this->created = $created;
         return $this;
     }
 
-    public function setDescription(string $description) : UserEntity\Photo
+    public function setDescription(string $description) : PhotoEntity\Photo
     {
         $this->description = $description;
         return $this;
     }
 
-    public function setExtension(string $extension) : UserEntity\Photo
+    public function setExtension(string $extension) : PhotoEntity\Photo
     {
         $this->extension = $extension;
         return $this;
     }
 
-    public function setOriginal(ImageEntity\Image $original) : UserEntity\Photo
+    public function setOriginal(ImageEntity\Image $original) : PhotoEntity\Photo
     {
         $this->original = $original;
         return $this;
     }
 
-    public function setPhotoId(int $photoId) : UserEntity\Photo
+    public function setPhotoId(int $photoId) : PhotoEntity\Photo
     {
         $this->photoId = $photoId;
         return $this;
     }
 
-    public function setThumbnails(array $thumbnails) : UserEntity\Photo
+    public function setThumbnails(array $thumbnails) : PhotoEntity\Photo
     {
         $this->thumbnails = $thumbnails;
         return $this;
     }
 
-    public function setTitle(string $title) : UserEntity\Photo
+    public function setTitle(string $title) : PhotoEntity\Photo
     {
         $this->title = $title;
         return $this;
     }
 
-    public function setUserId(int $userId) : UserEntity\Photo
+    public function setUserId(int $userId) : PhotoEntity\Photo
     {
         $this->userId = $userId;
         return $this;
     }
 
-    public function setViews(int $views) : UserEntity\Photo
+    public function setViews(int $views) : PhotoEntity\Photo
     {
         $this->views = $views;
         return $this;

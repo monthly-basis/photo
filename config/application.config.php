@@ -3,6 +3,8 @@
 return [
     'modules' => [
         'LeoGalleguillos\Image',
+        'LeoGalleguillos\Photo',
+        'LeoGalleguillos\String',
         'LeoGalleguillos\User',
         'Zend\Db',
         'Zend\Router',

@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Service\Photo;
+namespace LeoGalleguillos\PhotoTest\Model\Service;
 
 use LeoGalleguillos\String\Model\Service as StringService;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Service as UserService;
-use LeoGalleguillos\User\Model\Table as UserTable;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class RootRelativeUrlTest extends TestCase
@@ -12,9 +12,9 @@ class RootRelativeUrlTest extends TestCase
     protected function setUp()
     {
         $this->slugServiceMock = $this->createMock(
-            UserService\Photo\Slug::class
+            PhotoService\Slug::class
         );
-        $this->rootRelativeUrlService = new UserService\Photo\RootRelativeUrl(
+        $this->rootRelativeUrlService = new PhotoService\RootRelativeUrl(
             $this->slugServiceMock
         );
     }
@@ -22,14 +22,14 @@ class RootRelativeUrlTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserService\Photo\RootRelativeUrl::class,
+            PhotoService\RootRelativeUrl::class,
             $this->rootRelativeUrlService
         );
     }
 
     public function testGetRootRelativeUrl()
     {
-        $photoEntity = new UserEntity\Photo();
+        $photoEntity = new PhotoEntity\Photo();
         $photoEntity->setPhotoId(12345)
                     ->setTitle('The Title');
 

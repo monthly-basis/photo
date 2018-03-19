@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\UserTest;
+namespace LeoGalleguillos\PhotoTest;
 
 use Zend\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;

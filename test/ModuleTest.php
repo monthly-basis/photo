@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\UserTest;
+namespace LeoGalleguillos\PhotoTest;
 
-use LeoGalleguillos\User\Module;
+use LeoGalleguillos\Photo\Module;
 use PHPUnit\Framework\TestCase;
 use Zend\Mvc\Application;
 

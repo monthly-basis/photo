@@ -1,11 +1,12 @@
 <?php
-namespace LeoGalleguillos\User\Model\Factory;
+namespace LeoGalleguillos\Photo\Model\Factory;
 
 use DateTime;
 use LeoGalleguillos\Image\Model\Entity as ImageEntity;
 use LeoGalleguillos\Image\Model\Service as ImageService;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Table as UserTable;
 
 class Photo
 {
@@ -16,7 +17,7 @@ class Photo
      */
     public function __construct(
         ImageService\Thumbnail\Create $createThumbnailService,
-        UserTable\Photo $photoTable
+        PhotoTable\Photo $photoTable
     ) {
         $this->createThumbnailService = $createThumbnailService;
         $this->photoTable             = $photoTable;
@@ -30,8 +31,8 @@ class Photo
      */
     public function buildFromArray(
         array $array
-    ) : UserEntity\Photo {
-        $photo = new UserEntity\Photo();
+    ) : PhotoEntity\Photo {
+        $photo = new PhotoEntity\Photo();
 
         $photo->setPhotoId($array['photo_id'])
               ->setTitle($array['title'])
@@ -82,11 +83,11 @@ class Photo
      * Build from photo ID.
      *
      * @param int $photoId
-     * @return UserEntity\Photo
+     * @return PhotoEntity\Photo
      */
     public function buildFromPhotoId(
         int $photoId
-    ) : UserEntity\Photo {
+    ) : PhotoEntity\Photo {
         $array = $this->photoTable->selectWherePhotoId($photoId);
         return $this->buildFromArray($array);
     }

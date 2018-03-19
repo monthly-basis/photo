@@ -1,25 +1,25 @@
 <?php
-namespace LeoGalleguillos\User\Model\Service\Photo;
+namespace LeoGalleguillos\Photo\Model\Service;
 
 use ArrayObject;
 use Generator;
 use LeoGalleguillos\Image\Model\Entity as ImageEntity;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Factory as UserFactory;
-use LeoGalleguillos\User\Model\Table as UserTable;
 
 class Photos
 {
     /**
      * Construct.
      *
-     * @param UserFactory\Photo $photoFactory
-     * @param UserTable\Photo $photoTable
+     * @param PhotoFactory\Photo $photoFactory
+     * @param PhotoTable\Photo $photoTable
      */
     public function __construct(
-        UserFactory\Photo $photoFactory,
-        UserTable\Photo $photoTable
+        PhotoFactory\Photo $photoFactory,
+        PhotoTable\Photo $photoTable
     ) {
         $this->photoFactory = $photoFactory;
         $this->photoTable   = $photoTable;
@@ -40,9 +40,9 @@ class Photos
     /**
      * @return int
      */
-    public function getNumberOfPhotosForUser(UserEntity\User $userEntity)
+    public function getNumberOfPhotosForPhoto(PhotoEntity\Photo $userEntity)
     {
-        return $this->photoTable->selectCountWhereUserId($userEntity->getUserId());
+        return $this->photoTable->selectCountWherePhotoId($userEntity->getPhotoId());
     }
 
     public function getPhotosForUser(UserEntity\User $userEntity)

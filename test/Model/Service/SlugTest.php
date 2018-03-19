@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Service\Photo;
+namespace LeoGalleguillos\PhotoTest\Model\Service;
 
 use LeoGalleguillos\String\Model\Service as StringService;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Service as UserService;
-use LeoGalleguillos\User\Model\Table as UserTable;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class SlugTest extends TestCase
@@ -14,7 +14,7 @@ class SlugTest extends TestCase
         $this->urlFriendlyServiceMock = $this->createMock(
             StringService\UrlFriendly::class
         );
-        $this->slugService = new UserService\Photo\Slug(
+        $this->slugService = new PhotoService\Slug(
             $this->urlFriendlyServiceMock
         );
     }
@@ -22,14 +22,14 @@ class SlugTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserService\Photo\Slug::class,
+            PhotoService\Slug::class,
             $this->slugService
         );
     }
 
     public function testGetSlug()
     {
-        $photoEntity = new UserEntity\Photo();
+        $photoEntity = new PhotoEntity\Photo();
         $photoEntity->setTitle('The Title');
         $this->urlFriendlyServiceMock->method('getUrlFriendly')->willReturn(
             'the-slug'

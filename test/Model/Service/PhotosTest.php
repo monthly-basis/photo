@@ -1,11 +1,12 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Service\Photo;
+namespace LeoGalleguillos\PhotoTest\Model\Service;
 
 use Generator;
 use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Factory as UserFactory;
-use LeoGalleguillos\User\Model\Service as UserService;
-use LeoGalleguillos\User\Model\Table as UserTable;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class PhotosTest extends TestCase
@@ -13,12 +14,12 @@ class PhotosTest extends TestCase
     protected function setUp()
     {
         $this->photoFactoryMock = $this->createMock(
-            UserFactory\Photo::class
+            PhotoFactory\Photo::class
         );
         $this->photoTableMock = $this->createMock(
-            UserTable\Photo::class
+            PhotoTable\Photo::class
         );
-        $this->photosService = new UserService\Photo\Photos(
+        $this->photosService = new PhotoService\Photos(
             $this->photoFactoryMock,
             $this->photoTableMock
         );
@@ -27,7 +28,7 @@ class PhotosTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserService\Photo\Photos::class,
+            PhotoService\Photos::class,
             $this->photosService
         );
     }
@@ -48,7 +49,7 @@ class PhotosTest extends TestCase
             $array
         );
         $this->assertInstanceOf(
-            UserEntity\Photo::class,
+            PhotoEntity\Photo::class,
             $this->photosService->getNewestPhotos()->current()
         );
     }
@@ -69,12 +70,12 @@ class PhotosTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            UserEntity\Photo::class,
+            PhotoEntity\Photo::class,
             $generator->current()
         );
         $generator->next();
         $this->assertInstanceOf(
-            UserEntity\Photo::class,
+            PhotoEntity\Photo::class,
             $generator->current()
         );
         $generator->next();

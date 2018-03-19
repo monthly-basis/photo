@@ -1,18 +1,18 @@
 <?php
-namespace LeoGalleguillos\User\Model\Service\Photo;
+namespace LeoGalleguillos\Photo\Model\Service;
 
-use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Service as UserService;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
 
 class RootRelativeUrl
 {
     /**
      * Construct.
      *
-     * @param UserService\Photo\Slug $slugService
+     * @param PhotoService\Photo\Slug $slugService
      */
     public function __construct(
-        UserService\Photo\Slug $slugService
+        PhotoService\Slug $slugService
     ) {
         $this->slugService = $slugService;
     }
@@ -20,11 +20,11 @@ class RootRelativeUrl
     /**
      * Get root relative URL.
      *
-     * @param UserEntity\Photo $photoEntity
+     * @param PhotoEntity\Photo $photoEntity
      * @return string
      */
     public function getRootRelativeUrl(
-        UserEntity\Photo $photoEntity
+        PhotoEntity\Photo $photoEntity
     ) : string {
         return '/photos/'
              . $photoEntity->getPhotoId()

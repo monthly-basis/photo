@@ -1,15 +1,15 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Factory;
+namespace LeoGalleguillos\PhotoTest\Model\Factory;
 
 use ArrayObject;
 use DateTime;
 use LeoGalleguillos\Flash\Model\Service as FlashService;
 use LeoGalleguillos\Image\Model\Entity as ImageEntity;
 use LeoGalleguillos\Image\Model\Service as ImageService;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Factory as UserFactory;
-use LeoGalleguillos\User\Model\Service as UserService;
-use LeoGalleguillos\User\Model\Table as UserTable;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class PhotoTest extends TestCase
@@ -20,9 +20,9 @@ class PhotoTest extends TestCase
             ImageService\Thumbnail\Create::class
         );
         $this->photoTableMock = $this->createMock(
-            UserTable\Photo::class
+            PhotoTable\Photo::class
         );
-        $this->photoFactory = new UserFactory\Photo(
+        $this->photoFactory = new PhotoFactory\Photo(
             $this->createThumbnailServiceMock,
             $this->photoTableMock
         );
@@ -31,7 +31,7 @@ class PhotoTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserFactory\Photo::class,
+            PhotoFactory\Photo::class,
             $this->photoFactory
         );
     }
@@ -52,7 +52,7 @@ class PhotoTest extends TestCase
         $original->setRootRelativeUrl('/uploads/photos/2/original.jpg')
                  ->setRootUrl($_SERVER['DOCUMENT_ROOT'] . '/uploads/photos/2/original.jpg');
 
-        $photoEntity = new UserEntity\Photo();
+        $photoEntity = new PhotoEntity\Photo();
         $photoEntity->setCreated(new DateTime('0000-00-00 00:00:00'))
                     ->setDescription('description')
                     ->setExtension('jpg')
@@ -91,8 +91,8 @@ class PhotoTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            UserEntity\Photo::class,
-            $this->photoFactory->buildFromPhotoId(1)
+            PhotoEntity\Photo::class,
+            $this->photoFactory->buildFromPhotoId(2)
         );
     }
 }

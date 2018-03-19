@@ -1,12 +1,11 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Table;
+namespace LeoGalleguillos\PhotoTest\Model\Table;
 
 use ArrayObject;
 use Generator;
-use LeoGalleguillos\User\Model\Table as UserTable;
-use LeoGalleguillos\UserTest\TableTestCase;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use LeoGalleguillos\PhotoTest\TableTestCase;
 use Zend\Db\Adapter\Adapter;
-use PHPUnit\Framework\TestCase;
 
 class PhotoTest extends TableTestCase
 {
@@ -16,7 +15,7 @@ class PhotoTest extends TableTestCase
     protected $sqlPath = __DIR__ . '/../../../sql/leogalle_test/photo/';
 
     /**
-     * @var UserTable
+     * @var PhotoTable
      */
     protected $photoTable;
 
@@ -25,7 +24,7 @@ class PhotoTest extends TableTestCase
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
         $configArray     = $configArray['db']['adapters']['leogalle_test'];
         $this->adapter   = new Adapter($configArray);
-        $this->photoTable = new UserTable\Photo($this->adapter);
+        $this->photoTable = new PhotoTable\Photo($this->adapter);
 
         $this->setForeignKeyChecks0();
         $this->dropTable();
@@ -48,7 +47,7 @@ class PhotoTest extends TableTestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserTable\Photo::class,
+            PhotoTable\Photo::class,
             $this->photoTable
         );
     }

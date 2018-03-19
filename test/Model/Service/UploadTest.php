@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Service\Photo;
+namespace LeoGalleguillos\PhotoTest\Model\Service;
 
-use LeoGalleguillos\User\Model\Entity as UserEntity;
-use LeoGalleguillos\User\Model\Service as UserService;
-use LeoGalleguillos\User\Model\Table as UserTable;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class UploadTest extends TestCase
@@ -11,9 +11,9 @@ class UploadTest extends TestCase
     protected function setUp()
     {
         $this->photoTableMock = $this->createMock(
-            UserTable\Photo::class
+            PhotoTable\Photo::class
         );
-        $this->uploadService = new UserService\Photo\Upload(
+        $this->uploadService = new PhotoService\Upload(
             $this->photoTableMock
         );
     }
@@ -21,7 +21,7 @@ class UploadTest extends TestCase
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserService\Photo\Upload::class,
+            PhotoService\Upload::class,
             $this->uploadService
         );
     }

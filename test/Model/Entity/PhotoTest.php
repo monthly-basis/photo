@@ -1,22 +1,22 @@
 <?php
-namespace LeoGalleguillos\UserTest\Model\Entity;
+namespace LeoGalleguillos\PhotoTest\Model\Entity;
 
 use DateTime;
 use LeoGalleguillos\Image\Model\Entity as ImageEntity;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use PHPUnit\Framework\TestCase;
 
 class PhotoTest extends TestCase
 {
     protected function setUp()
     {
-        $this->photoEntity = new UserEntity\Photo();
+        $this->photoEntity = new PhotoEntity\Photo();
     }
 
     public function testInitialize()
     {
         $this->assertInstanceOf(
-            UserEntity\Photo::class,
+            PhotoEntity\Photo::class,
             $this->photoEntity
         );
     }
