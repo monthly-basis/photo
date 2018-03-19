@@ -1,0 +1,15 @@
+{
+    "name": "leo-galleguillos/photo",
+    "license": "MIT",
+    "require": {
+        "leo-galleguillos/image": "dev-master",
+        "zendframework/zend-test": "^3.1",
+        "zendframework/zend-db": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeoGalleguillos\\Photo\\": "src/",
+            "LeoGalleguillos\\PhotoTest\\": "test/"
+        }
+    }
+}
