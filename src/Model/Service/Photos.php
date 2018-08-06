@@ -42,7 +42,7 @@ class Photos
      */
     public function getNumberOfPhotosForUser(UserEntity\User $userEntity)
     {
-        return $this->photoTable->selectCountWhereUserId($userEntity->getPhotoId());
+        return $this->photoTable->selectCountWhereUserId($userEntity->getUserId());
     }
 
     public function getPhotosForUser(UserEntity\User $userEntity)
