@@ -40,9 +40,9 @@ class Photos
     /**
      * @return int
      */
-    public function getNumberOfPhotosForPhoto(PhotoEntity\Photo $userEntity)
+    public function getNumberOfPhotosForUser(UserEntity\Photo $userEntity)
     {
-        return $this->photoTable->selectCountWherePhotoId($userEntity->getPhotoId());
+        return $this->photoTable->selectCountWhereUserId($userEntity->getPhotoId());
     }
 
     public function getPhotosForUser(UserEntity\User $userEntity)
