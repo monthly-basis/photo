@@ -55,7 +55,7 @@ class Photo
         return (int) $row['count'];
     }
 
-    public function selectCountWherePhotoId(int $userId)
+    public function selectCountWhereUserId(int $userId)
     {
         $sql = '
             SELECT COUNT(*) AS `count`
