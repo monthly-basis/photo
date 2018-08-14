@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\Photo\Model\Service;
 
 use Imagick;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use LeoGalleguillos\User\Model\Entity as UserEntity;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 
 class Upload
@@ -21,14 +21,14 @@ class Upload
     /**
      * Upload
      *
-     * @param PhotoEntity\Photo $userEntity
+     * @param UserEntity\User $userEntity
      * @param string $fileName
      * @param string $fileTmpName
      * @param string $title
      * @param string $description
      */
     public function upload(
-        PhotoEntity\Photo $userEntity,
+        UserEntity\User $userEntity,
         string $fileName,
         string $fileTmpName,
         string $title,
@@ -38,7 +38,7 @@ class Upload
         $fileExtension = preg_replace('/\W/', '', $fileExtension);
 
         $photoId = $this->photoTable->insert(
-            $userEntity->getPhotoId(),
+            $userEntity->getUserId(),
             $fileExtension,
             $title,
             $description
