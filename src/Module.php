@@ -87,6 +87,11 @@ class Module
                         $serviceManager->get(PhotoTable\Photo::class)
                     );
                 },
+                PhotoService\Url::class => function ($serviceManager) {
+                    return new PhotoService\Url(
+                        $serviceManager->get(PhotoService\RootRelativeUrl::class)
+                    );
+                },
                 PhotoTable\Photo::class => function ($serviceManager) {
                     return new PhotoTable\Photo(
                         $serviceManager->get('main')
