@@ -16,9 +16,15 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
+                    'doesUserOwnPhoto    ' => PhotoHelper\DoesUserOwnPhoto::class,
                     'photoRootRelativeUrl' => PhotoHelper\RootRelativeUrl::class,
                 ],
                 'factories' => [
+                    PhotoHelper\DoesUserOwnPhoto::class => function ($serviceManager) {
+                        return new PhotoHelper\DoesUserOwnPhoto(
+                            $serviceManager->get(PhotoService\DoesUserOwnPhoto::class)
+                        );
+                    },
                     PhotoHelper\RootRelativeUrl::class => function ($serviceManager) {
                         return new PhotoHelper\RootRelativeUrl(
                             $serviceManager->get(PhotoService\RootRelativeUrl::class)
