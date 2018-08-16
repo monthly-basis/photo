@@ -39,6 +39,9 @@ class Module
                         $serviceManager->get(PhotoTable\Photo::class)
                     );
                 },
+                PhotoService\DoesUserOwnPhoto::class => function ($serviceManager) {
+                    return new PhotoService\DoesUserOwnPhoto();
+                },
                 PhotoService\IncrementViews::class => function ($serviceManager) {
                     return new PhotoService\IncrementViews(
                         $serviceManager->get(PhotoTable\Photo::class)
