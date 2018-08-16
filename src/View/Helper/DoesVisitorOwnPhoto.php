@@ -16,7 +16,7 @@ class DoesVisitorOwnPhoto extends AbstractHelper
     public function __invoke(
         PhotoEntity\Photo $photoEntity
     ): bool {
-        return $this->doesvisitorOwnPhotoService->doesVisitorOwnPhoto(
+        return $this->doesVisitorOwnPhotoService->doesVisitorOwnPhoto(
             $photoEntity
         );
     }
