@@ -10,6 +10,6 @@ class DoesUserOwnPhoto
         UserEntity\User $userEntity,
         PhotoEntity\Photo $photoEntity
     ): bool {
-        return ($userEntity->getUserId() == $photoEntity->getUserEntity()->getUserId());
+        return ($userEntity->getUserId() == $photoEntity->getUserId());
     }
 }
