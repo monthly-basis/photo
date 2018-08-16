@@ -26,6 +26,11 @@ class Module
                             $serviceManager->get(PhotoService\DoesUserOwnPhoto::class)
                         );
                     },
+                    PhotoHelper\DoesVisitorOwnPhoto::class => function ($serviceManager) {
+                        return new PhotoHelper\DoesVisitorOwnPhoto(
+                            $serviceManager->get(PhotoService\DoesVisitorOwnPhoto::class)
+                        );
+                    },
                     PhotoHelper\RootRelativeUrl::class => function ($serviceManager) {
                         return new PhotoHelper\RootRelativeUrl(
                             $serviceManager->get(PhotoService\RootRelativeUrl::class)
