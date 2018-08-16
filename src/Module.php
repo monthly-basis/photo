@@ -17,7 +17,8 @@ class Module
         return [
             'view_helpers' => [
                 'aliases' => [
-                    'doesUserOwnPhoto    ' => PhotoHelper\DoesUserOwnPhoto::class,
+                    'doesUserOwnPhoto'     => PhotoHelper\DoesUserOwnPhoto::class,
+                    'doesVisitorOwnPhoto'  => PhotoHelper\DoesVisitorOwnPhoto::class,
                     'photoRootRelativeUrl' => PhotoHelper\RootRelativeUrl::class,
                 ],
                 'factories' => [
