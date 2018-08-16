@@ -92,6 +92,16 @@ class Module
                         $serviceManager->get('main')
                     );
                 },
+                PhotoTable\Photo\Description::class => function ($serviceManager) {
+                    return new PhotoTable\Photo\Description(
+                        $serviceManager->get('main')
+                    );
+                },
+                PhotoTable\Photo\Title::class => function ($serviceManager) {
+                    return new PhotoTable\Photo\Title(
+                        $serviceManager->get('main')
+                    );
+                },
             ],
         ];
     }
