@@ -12,7 +12,7 @@ class PhotoTest extends TableTestCase
     /**
      * @var string
      */
-    protected $sqlPath = __DIR__ . '/../../../sql/leogalle_test/photo/';
+    protected $sqlPath;
 
     /**
      * @var PhotoTable
@@ -21,9 +21,11 @@ class PhotoTest extends TableTestCase
 
     protected function setUp()
     {
-        $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
-        $configArray     = $configArray['db']['adapters']['leogalle_test'];
-        $this->adapter   = new Adapter($configArray);
+        $this->sqlPath    = $_SERVER['PWD'] . '/sql/leogalle_test/photo';
+
+        $configArray      = require($_SERVER['PWD'] . '/config/autoload/local.php');
+        $configArray      = $configArray['db']['adapters']['leogalle_test'];
+        $this->adapter    = new Adapter($configArray);
         $this->photoTable = new PhotoTable\Photo($this->adapter);
 
         $this->setForeignKeyChecks0();
@@ -34,13 +36,13 @@ class PhotoTest extends TableTestCase
 
     protected function dropTable()
     {
-        $sql = file_get_contents($this->sqlPath . 'drop.sql');
+        $sql    = file_get_contents($this->sqlPath . '/drop.sql');
         $result = $this->adapter->query($sql)->execute();
     }
 
     protected function createTable()
     {
-        $sql = file_get_contents($this->sqlPath . 'create.sql');
+        $sql    = file_get_contents($this->sqlPath . '/create.sql');
         $result = $this->adapter->query($sql)->execute();
     }
 
@@ -52,23 +54,28 @@ class PhotoTest extends TableTestCase
         );
     }
 
-    public function testInsert()
+    public function testInsertAndSelectCount()
     {
+        $this->assertSame(
+            0,
+            $this->photoTable->selectCount()
+        );
+
         $this->assertSame(
             1,
             $this->photoTable->insert(123, 'jpg', 'title', 'description')
+        );
+        $this->assertSame(
+            1,
+            $this->photoTable->selectCount()
         );
 
         $this->assertSame(
             2,
             $this->photoTable->insert(123, 'jpg', 't', 'd')
         );
-    }
-
-    public function testSelectCount()
-    {
         $this->assertSame(
-            0,
+            2,
             $this->photoTable->selectCount()
         );
     }
