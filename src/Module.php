@@ -4,6 +4,7 @@ namespace LeoGalleguillos\Photo;
 use LeoGalleguillos\Flash\Model\Service as FlashService;
 use LeoGalleguillos\Image\Model\Service as ImageService;
 use LeoGalleguillos\String\Model\Service as StringService;
+use LeoGalleguillos\User\Model\Service as UserService;
 use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
 use LeoGalleguillos\Photo\Model\Service as PhotoService;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
@@ -47,6 +48,12 @@ class Module
                 },
                 PhotoService\DoesUserOwnPhoto::class => function ($serviceManager) {
                     return new PhotoService\DoesUserOwnPhoto();
+                },
+                PhotoService\DoesVisitorOwnPhoto::class => function ($serviceManager) {
+                    return new PhotoService\DoesVisitorOwnPhoto(
+                        $serviceManager->get(PhotoService\DoesUserOwnPhoto::class),
+                        $serviceManager->get(UserService\LoggedInUser::class)
+                    );
                 },
                 PhotoService\IncrementViews::class => function ($serviceManager) {
                     return new PhotoService\IncrementViews(
