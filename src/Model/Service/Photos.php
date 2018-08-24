@@ -30,9 +30,17 @@ class Photos
      *
      * @return Generator
      */
-    public function getNewestPhotos() : Generator
-    {
-        foreach ($this->photoTable->selectOrderByCreatedDesc() as $array) {
+    public function getPhotos(
+        int $page
+    ): Generator {
+        $offset   = ($page - 1) * 10;
+        $rowCount = 10;
+
+        $generator = $this->photoTable->selectOrderByCreatedDescLimit(
+            $offset,
+            $rowCount
+        );
+        foreach ($generator as $array) {
             yield $this->photoFactory->buildFromArray($array);
         }
     }

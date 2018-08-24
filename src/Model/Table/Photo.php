@@ -79,9 +79,11 @@ class Photo
     /**
      * @return Generator
      */
-    public function selectOrderByCreatedDesc()
-    {
-        $sql = '
+    public function selectOrderByCreatedDescLimit(
+        int $offset,
+        int $rowCount
+    ): Generator {
+        $sql = "
             SELECT `photo`.`photo_id`
                  , `photo`.`user_id`
                  , `photo`.`extension`
@@ -92,9 +94,9 @@ class Photo
               FROM `photo`
              ORDER
                 BY `photo`.`created` DESC
-             LIMIT 10
+             LIMIT $offset, $rowCount
                  ;
-        ';
+        ";
         $resultSet = $this->adapter->query($sql)->execute();
 
         foreach ($resultSet as $arrayObject) {

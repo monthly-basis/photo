@@ -85,7 +85,7 @@ class PhotoTest extends TableTestCase
         $this->photoTable->insert(123, 'jpg', 'title', 'description');
         $this->photoTable->insert(123, 'jpg', 'title', 'description');
 
-        $generator = $this->photoTable->selectOrderByCreatedDesc();
+        $generator = $this->photoTable->selectOrderByCreatedDescLimit(0, 10);
 
         $this->assertInstanceOf(
             Generator::class,

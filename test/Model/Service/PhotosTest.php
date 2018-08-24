@@ -33,24 +33,14 @@ class PhotosTest extends TestCase
         );
     }
 
-    public function testGetNewestPhotos()
+    public function testGetPhotos()
     {
-        $array = [
-            $array = [
-                'photo_id'    => '2',
-                'extension'   => 'jpg',
-                'title'       => 'title',
-                'description' => 'description',
-                'views'       => '0',
-                'created'     => '0000-00-00 00:00:00',
-            ]
-        ];
-        $this->photoTableMock->method('selectOrderByCreatedDesc')->willReturn(
-            $array
+        $this->photoTableMock->method('selectOrderByCreatedDescLimit')->willReturn(
+            $this->yieldArrays()
         );
         $this->assertInstanceOf(
             PhotoEntity\Photo::class,
-            $this->photosService->getNewestPhotos()->current()
+            $this->photosService->getPhotos(1)->current()
         );
     }
 
