@@ -72,6 +72,11 @@ class Module
                         $serviceManager->get(PhotoTable\Photo::class)
                     );
                 },
+                PhotoService\Photos\Count::class => function ($serviceManager) {
+                    return new PhotoService\Photos\Count(
+                        $serviceManager->get(PhotoTable\Photo::class)
+                    );
+                },
                 PhotoService\RootRelativeUrl::class => function ($serviceManager) {
                     return new PhotoService\RootRelativeUrl(
                         $serviceManager->get(PhotoService\Slug::class)
