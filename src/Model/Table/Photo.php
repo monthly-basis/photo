@@ -43,7 +43,12 @@ class Photo
                           ->getGeneratedValue();
     }
 
-    public function selectCount()
+    /**
+     * Select count.
+     *
+     * @return int
+     */
+    public function selectCount(): int
     {
         $sql = '
             SELECT COUNT(*) AS `count`
