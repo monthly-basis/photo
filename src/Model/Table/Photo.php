@@ -1,7 +1,6 @@
 <?php
 namespace LeoGalleguillos\Photo\Model\Table;
 
-use ArrayObject;
 use Generator;
 use Zend\Db\Adapter\Adapter;
 
@@ -10,7 +9,7 @@ class Photo
     /**
      * @var Adapter
      */
-    private $adapter;
+    protected $adapter;
 
     public function __construct(Adapter $adapter)
     {
@@ -18,6 +17,8 @@ class Photo
     }
 
     /**
+     * Insert.
+     *
      * @return int
      */
     public function insert(
@@ -25,7 +26,7 @@ class Photo
         $extension,
         $title,
         $description
-    ) {
+    ): int {
         $sql = '
             INSERT
               INTO `photo` (`user_id`, `extension`, `title`, `description`, `views`, `created`)
@@ -60,7 +61,7 @@ class Photo
         return (int) $row['count'];
     }
 
-    public function selectCountWhereUserId(int $userId)
+    public function selectCountWhereUserId(int $userId): int
     {
         $sql = '
             SELECT COUNT(*) AS `count`
@@ -77,6 +78,8 @@ class Photo
     }
 
     /**
+     * Select columns, order by `created` in descending order, with limit
+     *
      * @return Generator
      */
     public function selectOrderByCreatedDescLimit(
