@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 class PhotoTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->createThumbnailServiceMock = $this->createMock(
             ImageService\Thumbnail\Create::class

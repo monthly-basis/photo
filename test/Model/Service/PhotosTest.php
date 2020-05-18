@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class PhotosTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->photoFactoryMock = $this->createMock(
             PhotoFactory\Photo::class

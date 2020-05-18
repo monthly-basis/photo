@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class PhotoTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->photoEntity = new PhotoEntity\Photo();
     }

@@ -19,7 +19,7 @@ class PhotoTest extends TableTestCase
      */
     protected $photoTable;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->sqlPath    = $_SERVER['PWD'] . '/sql/leogalle_test/photo';
 

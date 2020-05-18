@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class RootRelativeUrlTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->rootRelativeUrlServiceMock = $this->createMock(
             PhotoService\RootRelativeUrl::class
