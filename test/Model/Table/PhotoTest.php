@@ -24,7 +24,7 @@ class PhotoTest extends TableTestCase
         $this->sqlPath    = $_SERVER['PWD'] . '/sql/leogalle_test/photo';
 
         $configArray      = require($_SERVER['PWD'] . '/config/autoload/local.php');
-        $configArray      = $configArray['db']['adapters']['leogalle_test'];
+        $configArray      = $configArray['db']['adapters']['test'];
         $this->adapter    = new Adapter($configArray);
         $this->photoTable = new PhotoTable\Photo($this->adapter);
 
