@@ -2,9 +2,8 @@
 namespace LeoGalleguillos\PhotoTest\Model\Table;
 
 use ArrayObject;
-use Generator;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
-use LeoGalleguillos\PhotoTest\TableTestCase;
+use LeoGalleguillos\Test\TableTestCase;
 use Zend\Db\Adapter\Adapter;
 
 class PhotoTest extends TableTestCase
@@ -21,37 +20,12 @@ class PhotoTest extends TableTestCase
 
     protected function setUp(): void
     {
-        $this->sqlPath    = $_SERVER['PWD'] . '/sql/leogalle_test/photo';
-
-        $configArray      = require($_SERVER['PWD'] . '/config/autoload/local.php');
-        $configArray      = $configArray['db']['adapters']['test'];
-        $this->adapter    = new Adapter($configArray);
-        $this->photoTable = new PhotoTable\Photo($this->adapter);
+        $this->photoTable = new PhotoTable\Photo($this->getAdapter());
 
         $this->setForeignKeyChecks0();
-        $this->dropTable();
-        $this->createTable();
+        $this->dropTable('photo');
+        $this->createTable('photo');
         $this->setForeignKeyChecks1();
-    }
-
-    protected function dropTable()
-    {
-        $sql    = file_get_contents($this->sqlPath . '/drop.sql');
-        $result = $this->adapter->query($sql)->execute();
-    }
-
-    protected function createTable()
-    {
-        $sql    = file_get_contents($this->sqlPath . '/create.sql');
-        $result = $this->adapter->query($sql)->execute();
-    }
-
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            PhotoTable\Photo::class,
-            $this->photoTable
-        );
     }
 
     public function testInsertAndSelectCount()
@@ -86,11 +60,6 @@ class PhotoTest extends TableTestCase
         $this->photoTable->insert(123, 'jpg', 'title', 'description');
 
         $generator = $this->photoTable->selectOrderByCreatedDescLimit(0, 10);
-
-        $this->assertInstanceOf(
-            Generator::class,
-            $generator
-        );
 
         $generator->next();
 
@@ -130,10 +99,6 @@ class PhotoTest extends TableTestCase
         $this->photoTable->insert(123, 'jpg', 'title', 'description');
         $this->photoTable->insert(123, 'png', 'title2', 'description2');
         $generator = $this->photoTable->selectWhereUserId(123);
-        $this->assertInstanceOf(
-            Generator::class,
-            $generator
-        );
 
         $this->assertSame(
             $generator->current()['title'],
