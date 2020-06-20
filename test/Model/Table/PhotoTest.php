@@ -54,6 +54,14 @@ class PhotoTest extends TableTestCase
         );
     }
 
+    public function test_selectCountWhereUserDeletedDatetimeIsNull()
+    {
+        $this->assertSame(
+            '0',
+            $this->photoTable->selectCountWhereUserDeletedDatetimeIsNull()->current()['COUNT(*)']
+        );
+    }
+
     public function testSelectOrderByCreatedDesc()
     {
         $this->photoTable->insert(123, 'jpg', 'title', 'description');

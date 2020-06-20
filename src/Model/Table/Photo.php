@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\Photo\Model\Table;
 
 use Generator;
+use Laminas\Db as LaminasDb;
 use Zend\Db\Adapter\Adapter;
 
 class Photo
@@ -59,6 +60,22 @@ class Photo
         $row = $this->adapter->query($sql)->execute()->current();
 
         return (int) $row['count'];
+    }
+
+    public function selectCountWhereUserDeletedDatetimeIsNull(): LaminasDb\Adapter\Driver\Pdo\Result
+    {
+        $sql = '
+            SELECT COUNT(*)
+
+              FROM `photo`
+
+              JOIN `user`
+             USING (`user_id`)
+
+             WHERE `user`.`deleted_datetime` IS NULL
+                 ;
+        ';
+        return $this->adapter->query($sql)->execute();
     }
 
     public function selectCountWhereUserId(int $userId): int
