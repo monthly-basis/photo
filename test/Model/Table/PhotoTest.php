@@ -103,12 +103,10 @@ class PhotoTest extends TableTestCase
             'created'     => '0000-00-00 00:00:00',
         ]);
 
-        $this->assertSame(
-            $arrayObject['extension'],
+        $this->assertNull(
             $generator->current()['extension']
         );
-        $this->assertSame(
-            $arrayObject['title'],
+        $this->assertNull(
             $generator->current()['title']
         );
     }

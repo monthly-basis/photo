@@ -77,11 +77,6 @@ class Photo
         return (int) $row['count'];
     }
 
-    /**
-     * Select columns, order by `created` in descending order, with limit
-     *
-     * @return Generator
-     */
     public function selectOrderByCreatedDescLimit(
         int $offset,
         int $rowCount
@@ -94,7 +89,14 @@ class Photo
                  , `photo`.`description`
                  , `photo`.`views`
                  , `photo`.`created`
+
               FROM `photo`
+
+              JOIN `user`
+             USING (`user_id`)
+
+             WHERE `user`.`deleted_datetime` IS NULL
+
              ORDER
                 BY `photo`.`created` DESC
              LIMIT $offset, $rowCount
