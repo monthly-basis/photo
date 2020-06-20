@@ -5,24 +5,16 @@ use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 
 class Count
 {
-    /**
-     * Construct.
-     *
-     * @param PhotoTable\Photo $photoTable
-     */
     public function __construct(
         PhotoTable\Photo $photoTable
     ) {
-        $this->photoTable   = $photoTable;
+        $this->photoTable = $photoTable;
     }
 
-    /**
-     * Get count.
-     *
-     * @return int
-     */
     public function getCount(): int
     {
-        return $this->photoTable->selectCount();
+        return $this->photoTable
+            ->selectCountWhereUserDeletedDatetimeIsNull()
+            ->current()['COUNT(*)'];
     }
 }
