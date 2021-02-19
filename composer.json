@@ -2,7 +2,6 @@
     "name": "leo-galleguillos/photo",
     "license": "MIT",
     "require": {
-        "leo-galleguillos/flash": "^1.0",
         "leo-galleguillos/image": "^1.0",
         "leo-galleguillos/re-captcha": "^2.0",
         "leo-galleguillos/string": "^1.0",

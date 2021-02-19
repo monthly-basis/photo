@@ -1,7 +1,6 @@
 <?php
 namespace LeoGalleguillos\Photo;
 
-use LeoGalleguillos\Flash\Model\Service as FlashService;
 use LeoGalleguillos\Image\Model\Service as ImageService;
 use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\User\Model\Service as UserService;
