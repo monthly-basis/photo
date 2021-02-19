@@ -3,7 +3,6 @@
     "license": "MIT",
     "require": {
         "leo-galleguillos/image": "^1.0",
-        "leo-galleguillos/re-captcha": "^2.0",
         "leo-galleguillos/string": "^1.0",
         "leo-galleguillos/user": "^1.0",
         "zendframework/zend-test": "^3.1",
