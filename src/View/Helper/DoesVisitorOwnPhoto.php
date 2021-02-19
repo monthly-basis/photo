@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Photo\View\Helper;
 
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class DoesVisitorOwnPhoto extends AbstractHelper
 {

@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\Photo\Model\Table\Photo;
 
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class Title
 {

@@ -4,7 +4,7 @@ namespace LeoGalleguillos\PhotoTest\Model\Table;
 use ArrayObject;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use LeoGalleguillos\Test\TableTestCase;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class PhotoTest extends TableTestCase
 {

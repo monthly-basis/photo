@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Photo\Model\Table;
 
 use Generator;
 use Laminas\Db as LaminasDb;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class Photo
 {
