@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7361ccc3e3f695bc7a951e7b17d3507b",
+    "content-hash": "dc84aba3eb7235fee2d876b80529472d",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1239,38 +1239,6 @@
             "time": "2020-09-14T14:23:00+00:00"
         },
         {
-            "name": "leo-galleguillos/image",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Image.git",
-                "reference": "fb68f6c652841d68a766a5e1d71c8a9e627b290f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Image/zipball/fb68f6c652841d68a766a5e1d71c8a9e627b290f",
-                "reference": "fb68f6c652841d68a766a5e1d71c8a9e627b290f",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-test": "^3.1",
-                "leo-galleguillos/test": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LeoGalleguillos\\Image\\": "src/",
-                    "LeoGalleguillos\\ImageTest\\": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "abandoned": "monthly-basis/image",
-            "time": "2020-06-19T23:14:47+00:00"
-        },
-        {
             "name": "leo-galleguillos/string",
             "version": "v1.0.42",
             "source": {
@@ -1300,38 +1268,6 @@
             ],
             "abandoned": "monthly-basis/string",
             "time": "2020-07-29T16:27:49+00:00"
-        },
-        {
-            "name": "leo-galleguillos/test",
-            "version": "v1.0.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Test.git",
-                "reference": "313e9bc536f6ce1e28eeecab25ea4aa11e203755"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/313e9bc536f6ce1e28eeecab25ea4aa11e203755",
-                "reference": "313e9bc536f6ce1e28eeecab25ea4aa11e203755",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-db": "^2.9",
-                "laminas/laminas-test": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LeoGalleguillos\\Test\\": "src/",
-                    "LeoGalleguillos\\TestTest\\": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "abandoned": "monthly-basis/laminas-test",
-            "time": "2020-06-06T16:07:22+00:00"
         },
         {
             "name": "leo-galleguillos/user",
@@ -1398,6 +1334,37 @@
                 "MIT"
             ],
             "time": "2020-11-09T05:06:44+00:00"
+        },
+        {
+            "name": "monthly-basis/image",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monthly-basis/image.git",
+                "reference": "db35f848b21af46d659cd2e4703b2bd93a8f4dff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monthly-basis/image/zipball/db35f848b21af46d659cd2e4703b2bd93a8f4dff",
+                "reference": "db35f848b21af46d659cd2e4703b2bd93a8f4dff",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-test": "^3.1",
+                "monthly-basis/laminas-test": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MonthlyBasis\\Image\\": "src/",
+                    "MonthlyBasis\\ImageTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2021-02-16T23:25:10+00:00"
         },
         {
             "name": "monthly-basis/laminas-test",

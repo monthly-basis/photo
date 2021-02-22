@@ -2,8 +2,8 @@
 namespace LeoGalleguillos\Photo\Model\Factory;
 
 use DateTime;
-use LeoGalleguillos\Image\Model\Entity as ImageEntity;
-use LeoGalleguillos\Image\Model\Service as ImageService;
+use MonthlyBasis\Image\Model\Entity as ImageEntity;
+use MonthlyBasis\Image\Model\Service as ImageService;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 use LeoGalleguillos\User\Model\Entity as UserEntity;

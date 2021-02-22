@@ -2,7 +2,7 @@
     "name": "leo-galleguillos/photo",
     "license": "MIT",
     "require": {
-        "leo-galleguillos/image": "^1.0",
+        "monthly-basis/image": "^2.0",
         "leo-galleguillos/string": "^1.0",
         "leo-galleguillos/user": "^1.0",
         "laminas/laminas-test": "^3.1",

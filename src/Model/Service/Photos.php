@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Photo\Model\Service;
 
 use ArrayObject;
 use Generator;
-use LeoGalleguillos\Image\Model\Entity as ImageEntity;
+use MonthlyBasis\Image\Model\Entity as ImageEntity;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;

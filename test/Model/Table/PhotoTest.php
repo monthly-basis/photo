@@ -3,7 +3,7 @@ namespace LeoGalleguillos\PhotoTest\Model\Table;
 
 use ArrayObject;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
-use LeoGalleguillos\Test\TableTestCase;
+use MonthlyBasis\LaminasTest\TableTestCase;
 use Laminas\Db\Adapter\Adapter;
 
 class PhotoTest extends TableTestCase

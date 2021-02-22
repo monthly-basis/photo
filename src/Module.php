@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\Photo;
 
-use LeoGalleguillos\Image\Model\Service as ImageService;
+use MonthlyBasis\Image\Model\Service as ImageService;
 use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\User\Model\Service as UserService;
 use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;

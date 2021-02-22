@@ -4,7 +4,7 @@ return [
     'modules' => [
         'Laminas\Db',
         'Laminas\Router',
-        'LeoGalleguillos\Image',
+        'MonthlyBasis\Image',
         'LeoGalleguillos\Photo',
         'LeoGalleguillos\String',
         'LeoGalleguillos\User',

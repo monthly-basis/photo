@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\PhotoTest\Model\Entity;
 
 use DateTime;
-use LeoGalleguillos\Image\Model\Entity as ImageEntity;
+use MonthlyBasis\Image\Model\Entity as ImageEntity;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use PHPUnit\Framework\TestCase;
 
