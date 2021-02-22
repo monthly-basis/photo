@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\PhotoTest\Model\Service;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Service as PhotoService;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;

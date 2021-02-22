@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\Photo\Model\Service;
 
-use LeoGalleguillos\String\Model\Service as StringService;
+use MonthlyBasis\String\Model\Service as StringService;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 
 class Slug
