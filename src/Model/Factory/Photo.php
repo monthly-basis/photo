@@ -6,7 +6,7 @@ use MonthlyBasis\Image\Model\Entity as ImageEntity;
 use MonthlyBasis\Image\Model\Service as ImageService;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Photo
 {

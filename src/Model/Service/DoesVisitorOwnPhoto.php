@@ -4,7 +4,7 @@ namespace LeoGalleguillos\Photo\Model\Service;
 use Exception;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use LeoGalleguillos\User\Model\Service as UserService;
+use MonthlyBasis\User\Model\Service as UserService;
 
 class DoesVisitorOwnPhoto
 {

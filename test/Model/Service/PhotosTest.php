@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\PhotoTest\Model\Service;
 
 use Generator;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
 use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
 use LeoGalleguillos\Photo\Model\Service as PhotoService;

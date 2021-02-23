@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\Photo\Model\Service;
 
 use Imagick;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;
 
 class Upload

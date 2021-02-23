@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Photo;
 
 use MonthlyBasis\Image\Model\Service as ImageService;
 use MonthlyBasis\String\Model\Service as StringService;
-use LeoGalleguillos\User\Model\Service as UserService;
+use MonthlyBasis\User\Model\Service as UserService;
 use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
 use LeoGalleguillos\Photo\Model\Service as PhotoService;
 use LeoGalleguillos\Photo\Model\Table as PhotoTable;

@@ -4,7 +4,7 @@ namespace LeoGalleguillos\Photo\Model\Entity;
 use DateTime;
 use MonthlyBasis\Image\Model\Entity as ImageEntity;
 use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Photo
 {
