@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Service\Photos;
+namespace MonthlyBasis\Photo\Model\Service\Photos;
 
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 
 class Count
 {

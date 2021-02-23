@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Service;
+namespace MonthlyBasis\Photo\Model\Service;
 
 use Exception;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Service as PhotoService;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Service as PhotoService;
 use MonthlyBasis\User\Model\Service as UserService;
 
 class DoesVisitorOwnPhoto

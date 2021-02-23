@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\PhotoTest;
+namespace MonthlyBasis\PhotoTest;
 
 use Laminas\Db\Adapter\Adapter;
 use PHPUnit\Framework\TestCase;

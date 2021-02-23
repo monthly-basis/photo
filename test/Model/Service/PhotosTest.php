@@ -1,12 +1,12 @@
 <?php
-namespace LeoGalleguillos\PhotoTest\Model\Service;
+namespace MonthlyBasis\PhotoTest\Model\Service;
 
 use Generator;
 use MonthlyBasis\User\Model\Entity as UserEntity;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
-use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Factory as PhotoFactory;
+use MonthlyBasis\Photo\Model\Service as PhotoService;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class PhotosTest extends TestCase

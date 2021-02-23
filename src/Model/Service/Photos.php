@@ -1,12 +1,12 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Service;
+namespace MonthlyBasis\Photo\Model\Service;
 
 use ArrayObject;
 use Generator;
 use MonthlyBasis\Image\Model\Entity as ImageEntity;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Factory as PhotoFactory;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Photos

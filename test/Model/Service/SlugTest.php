@@ -1,10 +1,10 @@
 <?php
-namespace LeoGalleguillos\PhotoTest\Model\Service;
+namespace MonthlyBasis\PhotoTest\Model\Service;
 
 use MonthlyBasis\String\Model\Service as StringService;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Service as PhotoService;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class SlugTest extends TestCase

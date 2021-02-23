@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\PhotoTest\View\Helper;
+namespace MonthlyBasis\PhotoTest\View\Helper;
 
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use LeoGalleguillos\Photo\View\Helper as PhotoHelper;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Service as PhotoService;
+use MonthlyBasis\Photo\View\Helper as PhotoHelper;
 use PHPUnit\Framework\TestCase;
 
 class RootRelativeUrlTest extends TestCase

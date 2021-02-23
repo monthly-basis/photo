@@ -1,5 +1,5 @@
 {
-    "name": "leo-galleguillos/photo",
+    "name": "monthly-basis/photo",
     "license": "MIT",
     "require": {
         "monthly-basis/image": "^2.0",
@@ -10,8 +10,8 @@
     },
     "autoload": {
         "psr-4": {
-            "LeoGalleguillos\\Photo\\": "src/",
-            "LeoGalleguillos\\PhotoTest\\": "test/"
+            "MonthlyBasis\\Photo\\": "src/",
+            "MonthlyBasis\\PhotoTest\\": "test/"
         }
     }
 }

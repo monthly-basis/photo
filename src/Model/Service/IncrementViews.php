@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Service;
+namespace MonthlyBasis\Photo\Model\Service;
 
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 
 class IncrementViews
 {

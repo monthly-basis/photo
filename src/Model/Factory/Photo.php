@@ -1,11 +1,11 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Factory;
+namespace MonthlyBasis\Photo\Model\Factory;
 
 use DateTime;
 use MonthlyBasis\Image\Model\Entity as ImageEntity;
 use MonthlyBasis\Image\Model\Service as ImageService;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Photo

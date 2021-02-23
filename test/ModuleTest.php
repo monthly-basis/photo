@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\PhotoTest;
+namespace MonthlyBasis\PhotoTest;
 
-use LeoGalleguillos\Photo\Module;
+use MonthlyBasis\Photo\Module;
 use PHPUnit\Framework\TestCase;
 use Laminas\Mvc\Application;
 

@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\PhotoTest\Model\Table;
+namespace MonthlyBasis\PhotoTest\Model\Table;
 
 use ArrayObject;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
 use Laminas\Db\Adapter\Adapter;
 

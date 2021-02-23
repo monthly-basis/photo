@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Service;
+namespace MonthlyBasis\Photo\Model\Service;
 
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class DoesUserOwnPhoto

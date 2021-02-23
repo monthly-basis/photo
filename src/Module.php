@@ -1,13 +1,13 @@
 <?php
-namespace LeoGalleguillos\Photo;
+namespace MonthlyBasis\Photo;
 
 use MonthlyBasis\Image\Model\Service as ImageService;
 use MonthlyBasis\String\Model\Service as StringService;
 use MonthlyBasis\User\Model\Service as UserService;
-use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
-use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
-use LeoGalleguillos\Photo\View\Helper as PhotoHelper;
+use MonthlyBasis\Photo\Model\Factory as PhotoFactory;
+use MonthlyBasis\Photo\Model\Service as PhotoService;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\View\Helper as PhotoHelper;
 
 class Module
 {

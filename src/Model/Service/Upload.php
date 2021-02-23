@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Service;
+namespace MonthlyBasis\Photo\Model\Service;
 
 use Imagick;
 use MonthlyBasis\User\Model\Entity as UserEntity;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 
 class Upload
 {

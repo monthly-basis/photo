@@ -1,15 +1,14 @@
 <?php
-namespace LeoGalleguillos\PhotoTest\Model\Factory;
+namespace MonthlyBasis\PhotoTest\Model\Factory;
 
 use ArrayObject;
 use DateTime;
-use LeoGalleguillos\Flash\Model\Service as FlashService;
 use MonthlyBasis\Image\Model\Entity as ImageEntity;
 use MonthlyBasis\Image\Model\Service as ImageService;
-use LeoGalleguillos\Photo\Model\Entity as PhotoEntity;
-use LeoGalleguillos\Photo\Model\Factory as PhotoFactory;
-use LeoGalleguillos\Photo\Model\Service as PhotoService;
-use LeoGalleguillos\Photo\Model\Table as PhotoTable;
+use MonthlyBasis\Photo\Model\Entity as PhotoEntity;
+use MonthlyBasis\Photo\Model\Factory as PhotoFactory;
+use MonthlyBasis\Photo\Model\Service as PhotoService;
+use MonthlyBasis\Photo\Model\Table as PhotoTable;
 use PHPUnit\Framework\TestCase;
 
 class PhotoTest extends TestCase

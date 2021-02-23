@@ -5,7 +5,7 @@ return [
         'Laminas\Db',
         'Laminas\Router',
         'MonthlyBasis\Image',
-        'LeoGalleguillos\Photo',
+        'MonthlyBasis\Photo',
         'MonthlyBasis\String',
         'MonthlyBasis\User',
     ],

@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\Photo\Model\Table;
+namespace MonthlyBasis\Photo\Model\Table;
 
 use Generator;
 use Laminas\Db as LaminasDb;
